@@ -58,10 +58,10 @@ SRC = ft_atoi.c\
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 OBJ = $(SRC:.c=.o)
-HEADERS = "libft.h"
+HEADERS = libft.h
 
 all: $(NAME)
-$(NAME): $(OBJ) $(SRC)
+$(NAME): $(OBJ) $(HEADERS)
 	ar -rcs $@ $^
 clean:
 	$(RM) $(OBJ)

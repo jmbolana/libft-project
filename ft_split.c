@@ -93,8 +93,6 @@ size_t	cnt_tok(char const *s, char c)
 	size_t	cnt;
 
 	i = 0;
-	while (s[i] == c)
-		i++;
 	cnt = 0;
 	while (s[i] && s[i] != c)
 	{
