@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
+#ifndef LIBFT_H
+# define LIBFT_H
+
 #include <limits.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -67,3 +71,5 @@ void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *str, int ch, size_t n);
 char				**ft_split(char const *s, char c);
+
+#endif
