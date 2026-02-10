@@ -6,7 +6,7 @@
 /*   By: jmbolana <jmbolana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 16:19:36 by jmbolana          #+#    #+#             */
-/*   Updated: 2026/02/07 16:39:47 by jmbolana         ###   ########.fr       */
+/*   Updated: 2026/02/10 08:47:25 by jmbolana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!lst && !del)
+	if (!lst || !del)
 		return ;
 	del(lst -> content);
 	free(lst);
