@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmbolana <jmbolana@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Jmbolana <jmbolana@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 20:38:34 by jmbolana          #+#    #+#             */
-/*   Updated: 2026/02/10 08:03:27 by jmbolana         ###   ########.fr       */
+/*   Updated: 2026/02/14 09:02:12 by Jmbolana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,8 @@ size_t	ft_strlcpy(char *destination, const char *source, size_t size)
 	size_t	i;
 	size_t	len;
 
-	if (!source)
-		return (0);
 	len = ft_strlen(source);
-	if (!destination || size == 0)
+	if (size == 0)
 		return (len);
 	i = 0;
 	while (source[i] != '\0' && i < (size - 1))

@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include <stdio.h>*/
+// #include <stdio.h>
 
 static size_t	countchar(int i);
 
@@ -22,7 +22,7 @@ char	*ft_itoa(int i)
 	int		itemp;
 
 	if (i == 0)
-		return ("0");
+		return (ft_strdup("0"));
 	if (i == INT_MIN)
 		return (ft_strdup("-2147483648"));
 	int_size = countchar(i);
@@ -30,16 +30,16 @@ char	*ft_itoa(int i)
 	if (i < 0)
 		i *= -1;
 	temp = ft_calloc(sizeof(char), int_size + 1);
-	while (int_size - 1 > 0)
+	if (!temp)
+		return (NULL);
+	while (int_size > (size_t)(itemp < 0))
 	{
 		temp[int_size - 1] = '0' + i % 10;
 		i /= 10;
 		int_size--;
 	}
 	if (itemp < 0)
-		temp[--int_size] = '-';
-	else
-		temp[--int_size] = '0' + i;
+		temp[0] = '-';
 	return (temp);
 }
 
@@ -62,12 +62,11 @@ static size_t	countchar(int i)
 	}
 	return (++count);
 }
-/*
-int	main(void)
-{
-	int	i;
 
-	i = -2147483648LL;
-	printf("The string version of %d is %s\n", i, ft_itoa(i));
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	char *s = ft_itoa(-1234);
+
+// 	printf("The string version of '-1234' is %s\n",s);
+// 	return (0);
+// }
