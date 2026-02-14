@@ -88,7 +88,7 @@ These are functions that are not part of the standard C library but are essentia
 * **Data Conversion**: The `ft_itoa` function to convert integers to strings and `ft_split` to transform a string into an array of strings based on a delimiter.
 * **Output to File Descriptors**: A set of `_fd` functions (`ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd`) allowing output to specific streams.
 
-### 3. Linked List Manipulation (Bonus)
+### 3. Linked List Manipulation
 The bonus part introduces a custom data structure called `t_list` to manage dynamic data sets.
 * **Node Creation**: Initializing new nodes with `ft_lstnew`.
 * **Stack/Queue Operations**: Adding nodes to the beginning or end of the list using `ft_lstadd_front` and `ft_lstadd_back`.
